@@ -1,5 +1,6 @@
 import React from 'react'
 import {useState} from 'react'
+import {Link} from 'react-router-dom'
 const AddContact = ({addContactHandler}) => {
     const [name, setName]=useState("")
     const [email, setEmail]=useState("")
@@ -29,6 +30,10 @@ const AddContact = ({addContactHandler}) => {
                         <input type="text" name="name" placeholder = "mail" value={email} onChange={(e) => setEmail(e.target.value)}/>
                     </div>
                     <button className = "ui button blue">Add</button>
+                    <Link to= "/contact">
+                    <button className = "ui button blue">Show contacts</button>
+                    </Link>
+                    
                 </form>
             </div>
   )
